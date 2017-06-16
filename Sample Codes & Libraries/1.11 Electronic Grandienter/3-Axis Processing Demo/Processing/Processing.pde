@@ -13,8 +13,9 @@ void setup()
   size(600, 500, P3D);
 
   /*Set my serial port to same as Arduino, baud rate 9600*/
-  myPort = new Serial(this, Serial.list()[0], 9600); // if you have only ONE COM port active
-  //myPort = new Serial(this, "COM5", 9600);  // if you know the 101 COM port
+  //myPort = new Serial(this, Serial.list()[0], 9600); // if you have only ONE COM port active
+  //"COM5" 부분을 제누이노101 보드가 연결되어 있는 포트로 수정해줍니다
+  myPort = new Serial(this, "COM5", 9600);  // if you know the 101 COM port
 
   textSize(16); // set text size
   textMode(SHAPE); // set text mode to shape
